@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#f4f0e6">
+<title>墨戏 · 打字成墨</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="gl"></canvas>
+  <canvas id="fx"></canvas>
+</div>
+
+<header id="brand">
+  <div class="title">墨戲</div>
+  <div class="sub">打字成墨 · 落笔生万象</div>
+  <div class="seal">墨</div>
+</header>
+
+<div id="tools">
+  <button id="soundBtn" class="tool" type="button" aria-label="声音"><span>聲</span></button>
+  <button id="washBtn" class="tool" type="button" aria-label="洗纸"><span>洗</span></button>
+</div>
+
+<div id="whisper" aria-live="polite"></div>
+
+<div id="hint">移动鼠标择位 · 写下汉字落墨 · 试试「雨」「风」「竹」「鱼」</div>
+
+<footer id="ui">
+  <div id="palette" aria-label="字牌">
+    <div class="group"><em>天</em>
+      <button class="chip" data-char="雨" title="一场雨">雨</button>
+      <button class="chip" data-char="风" title="起风">风</button>
+      <button class="chip" data-char="雪" title="落雪">雪</button>
+      <button class="chip" data-char="云" title="云">云</button>
+      <button class="chip" data-char="雾" title="起雾">雾</button>
+      <button class="chip" data-char="雷" title="雷">雷</button>
+    </div>
+    <div class="group"><em>山</em>
+      <button class="chip" data-char="山" title="山">山</button>
+      <button class="chip" data-char="水" title="一脉水">水</button>
+      <button class="chip" data-char="石" title="石">石</button>
+      <button class="chip" data-char="月" title="月">月</button>
+    </div>
+    <div class="group"><em>木</em>
+      <button class="chip" data-char="竹" title="竹">竹</button>
+      <button class="chip" data-char="松" title="松">松</button>
+      <button class="chip" data-char="梅" title="梅">梅</button>
+      <button class="chip" data-char="柳" title="柳">柳</button>
+      <button class="chip" data-char="荷" title="荷">荷</button>
+      <button class="chip" data-char="菊" title="菊">菊</button>
+      <button class="chip" data-char="兰" title="兰">兰</button>
+    </div>
+    <div class="group"><em>灵</em>
+      <button class="chip" data-char="鱼" title="鱼">鱼</button>
+      <button class="chip" data-char="鹤" title="鹤">鹤</button>
+      <button class="chip" data-char="鸟" title="鸟">鸟</button>
+      <button class="chip" data-char="蝶" title="蝶">蝶</button>
+    </div>
+    <div class="group"><em>物</em>
+      <button class="chip" data-char="舟" title="舟">舟</button>
+      <button class="chip" data-char="亭" title="亭">亭</button>
+      <button class="chip" data-char="灯" title="灯">灯</button>
+      <button class="chip" data-char="印" title="落款">印</button>
+      <button class="chip" data-char="墨" title="一泼浓墨">墨</button>
+    </div>
+  </div>
+  <div id="writebar">
+    <span class="mark">筆</span>
+    <input id="composer" type="text" maxlength="8" autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false" enterkeyhint="done"
+      placeholder="写下你想看见的字…">
+    <button id="enterBtn" type="button" aria-label="落笔">落</button>
+  </div>
+</footer>
+
+<div id="boot">正在铺纸研墨…</div>
+
+<script src="js/util.js"></script>
+<script src="js/brush.js"></script>
+<script src="js/fluid.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/entities.js"></script>
+<script src="js/world.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
